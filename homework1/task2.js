@@ -8,7 +8,7 @@ console.log(mammal);
 let number = 123;
 
 function printNumber() {
-    var number = 584;
+    let number = 584;
     console.log(number);
 }
 
