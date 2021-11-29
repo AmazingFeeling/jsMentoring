@@ -15,13 +15,13 @@ Object.defineProperties(car, {
     }
 })
 
-console.log('`color` variable before delete: ' + car.color)
+console.log('`color` property before delete: ' + car.color)
 delete car.color
-console.log('`color` variable after delete: ' + car.color)
+console.log('`color` property after delete: ' + car.color)
 
-console.log('`color` variable before delete: ' + car.type)
+console.log('`type` property before delete: ' + car.type)
 delete car.type
-console.log('`color` variable after delete: ' + car.type)
+console.log('`type` property after delete: ' + car.type)
 
 
 for(let [prop, value] of Object.entries(car)) {
