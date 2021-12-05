@@ -19,15 +19,12 @@ const cow = {
 cow[`logCowData`](cow.name, cow.type, cow.pawsCount);
 
 const ostrich = {
+    name: "Jack",
+    type: "ostrich",
+    pawsCount: 2,
     logOstrichData: (name, type, pawsCount) => {
         console.log(`This is ${name} the ${type}, has ${pawsCount} paws`)
     }
 }
 
-const ostrichDetails = {
-    name: "Jack",
-    type: "ostrich",
-    pawsCount: 2,
-}
-
-ostrich.logOstrichData.call(ostrichDetails, ostrichDetails.name, ostrichDetails.type, ostrichDetails.pawsCount)
+ostrich.logOstrichData(ostrich.name, ostrich.type, ostrich.pawsCount)
