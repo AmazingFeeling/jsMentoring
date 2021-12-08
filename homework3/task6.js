@@ -5,20 +5,11 @@ const object = {
 };
 
 function createArrayFromObject(object) {
-    let arrayFromObject = [];
-    for(let [prop, value] of Object.entries(object)) {
-        arrayFromObject.push(prop);
-        arrayFromObject.push(value);
-    }
+    let arrayFromObject = Object.entries(object);
     console.log('Log array created from object:')
-    console.log(arrayFromObject);
+    console.log(JSON.stringify(arrayFromObject));
 
-    let objectFromArray = {};
-    for (let i = 0; i < arrayFromObject.length; i++) {
-        objectFromArray[arrayFromObject[i]] = arrayFromObject[i + 1];
-        i++;
-    }
-
+    let objectFromArray = Object.fromEntries(arrayFromObject);
     console.log('Log object created from array:')
     console.log(objectFromArray);
 }
