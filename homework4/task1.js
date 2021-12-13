@@ -7,4 +7,4 @@ const todayDate = function() {
 
     return dayOfMonth + '.' + month + '.' + year
 }
-todayDate();
+console.log(todayDate());
