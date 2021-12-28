@@ -13,7 +13,6 @@ console.log(car.constructor === Car);
 
 // 2)
 let animal = {
-    __proto__: mammals,
     eats: true
 };
 let mammals = {
@@ -23,5 +22,7 @@ let mammals = {
 };
 
 let cat = Object.create(animal);
+
+Object.setPrototypeOf(animal, mammals);
 
 cat.run();

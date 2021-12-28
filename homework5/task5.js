@@ -1,48 +1,38 @@
 class Wheel {
-    drive() {
+    drive = () => {
         console.log('drive');
-    }
+    };
 }
 
 class Tyre {
-    brake() {
+    brake = () => {
         console.log('brake');
-    }
+    };
 }
 
 class Steering {
-    steer(x, y) {
+    steer = (x, y) => {
         console.log(`steering ${x} and ${y}`);
-    }
+    };
 }
 
 class Wiper {
-    wipe(speed) {
+    wipe = speed => {
         console.log(`wipe with ${speed}`);
-    }
+    };
 }
 
 class Engine {
-    start() {
+    start = () => {
         console.log('start');
-    }
+    };
 }
 
 class Car {
 
 }
 
-function mergeClasses(target, ...classesToMerge) {
-    classesToMerge.forEach(classToMerge => {
-        Object.getOwnPropertyNames(classToMerge.prototype).forEach(propertyName => {
-            target.prototype[propertyName] = classToMerge.prototype[propertyName]
-        })
-    })
-}
-
-mergeClasses(Car, Wheel, Tyre, Steering, Wiper, Engine)
-
-let car = new Car();
+const car = Object.assign(Car.prototype, new Wheel(), new Tyre(), new Steering(), new Wiper(), new Engine())
 
 car.start();
 car.drive();
