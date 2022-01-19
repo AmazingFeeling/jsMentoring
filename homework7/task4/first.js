@@ -4,7 +4,7 @@ export function someFunc() {
     console.log('function is called')
 }
 
-export class SomeClass {
+export default class SomeClass {
     classFunction() {
         console.log('function inside class called')
     }
