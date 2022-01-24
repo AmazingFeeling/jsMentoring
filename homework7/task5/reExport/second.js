@@ -1,2 +1,1 @@
-import {field, someFunc, SomeClass} from "./first.js"
-export {field, someFunc, SomeClass}
+export {field, someFunc, SomeClass} from "./first.js"
